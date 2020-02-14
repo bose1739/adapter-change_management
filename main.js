@@ -114,6 +114,7 @@ healthcheck(callback) {
       * healthcheck(), execute it passing the error seen as an argument
       * for the callback's errorMessage parameter.
       */
+      log.error('Id:'+this.id+' '+error);
       this.emitOffline();
    } else {
      /**
@@ -126,6 +127,7 @@ healthcheck(callback) {
       * parameter as an argument for the callback function's
       * responseData parameter.
       */
+      log.debug(result);
       this.emitOnline();
    }
  });
